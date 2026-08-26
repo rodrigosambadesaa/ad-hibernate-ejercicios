@@ -15,4 +15,18 @@ Importar la base de datos **Hibernate 1 corregida** y crear un programa usando H
 
 ## Base de datos original
 
-El fichero asociado al ejercicio se conserva como [`database/mihibernate.sql`](database/mihibernate.sql).
+El volcado original asociado al ejercicio se conserva íntegro, comprimido sin modificar su contenido, en [`database/mihibernate.sql.gz`](database/mihibernate.sql.gz).
+
+Para obtener el SQL original:
+
+```bash
+gzip -dc database/mihibernate.sql.gz > database/mihibernate.sql
+```
+
+Después puede importarse con MySQL/MariaDB, por ejemplo:
+
+```bash
+mysql -u root -p < database/mihibernate.sql
+```
+
+El SQL crea y selecciona la base de datos `hibernate1`, además de definir sus tablas, relaciones y datos de ejemplo.
